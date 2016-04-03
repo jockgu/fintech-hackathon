@@ -1,0 +1,70 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "SaveGen API",
+    "description": "An API backend for the SaveGen social saving application",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "name": "SaveGen hackathon team"
+    },
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "host": "savegen.eu-gb.mybluemix.net",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "description": "Returns all savegen users",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of pets.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "required": [
+        "profileid",
+      ],
+      "properties": {
+        "profileid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "vices": {
+          "type": "array"
+        },
+        "metrics": {
+          "type": "array"
+        },
+        "viceEvents": {
+          "type": "array"
+        },        
+      }
+    }
+  }
+}

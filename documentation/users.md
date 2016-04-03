@@ -4,7 +4,7 @@
 
 * **URL**
 
-  /api/users/:id
+  /api/users/:profileid
 
 * **Method:**
 
