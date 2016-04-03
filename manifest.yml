@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: savegen
+  host: savegen
+  disk_quota: 1024M
+  services:
+  - mongodb-sk
